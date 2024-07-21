@@ -244,7 +244,48 @@ elif page == "📈 Visualisation":
     # Load your dataset (replace with your own data loading code)
     @st.cache_data
     def load_data(filename):
-        data = pd.read_csv(filename,low_memory=False)
+        data = pd.read_csv(filename,dtypes={
+'FOD_ID':'int64',
+'FPA_ID':'O',
+'SOURCE_SYSTEM_TYPE':'O',
+'SOURCE_SYSTEM':'O',
+'NWCG_REPORTING_AGENCY':'O',
+'NWCG_REPORTING_UNIT_ID':'O',
+'NWCG_REPORTING_UNIT_NAME':'O',
+'SOURCE_REPORTING_UNIT':'O',
+'SOURCE_REPORTING_UNIT_NAME':'O',
+'LOCAL_FIRE_REPORT_ID':'O',
+'LOCAL_INCIDENT_ID':'O',
+'FIRE_CODE':'O',
+'FIRE_NAME':'O',
+'ICS_209_INCIDENT_NUMBER':'O',
+'ICS_209_NAME':'O',
+'MTBS_ID':'O',
+'MTBS_FIRE_NAME':'O',
+'COMPLEX_NAME':'O',
+'FIRE_YEAR':'int64',
+'DISCOVERY_DATE':'float64',
+'DISCOVERY_DOY':'int64',
+'DISCOVERY_TIME':'int64',
+'STAT_CAUSE_CODE':'float64',
+'STAT_CAUSE_DESCR':'O',
+'CONT_DATE':'float64',
+'CONT_DOY':'float64',
+'CONT_TIME':'int64',
+'FIRE_SIZE':'float64',
+'FIRE_SIZE_CLASS':'O',
+'LATITUDE':'float64',
+'LONGITUDE':'float64',
+'OWNER_CODE':'float64',
+'OWNER_DESCR':'O',
+'STATE':'O',
+'COUNTY':'O',
+'FIPS_CODE':'O',
+'FIPS_NAME':'O',
+'Shape':'O',
+'DISCOVERY_DATE_TIME':'O',
+'CONT_DATE_TIME':'O',
+'POPULATION':'float64'})
         return data
     
     file_path_df_fires = os.path.join(script_dir, "df_Fires_Pop.csv") 
