@@ -246,7 +246,7 @@ elif page == "📈 Visualisation":
     def load_data(filename):
         data = pd.read_csv(filename)
         return data
-    
+    script_dir = os.path.dirname(__file__)
     file_path_df_fires = os.path.join(script_dir, "df_Fires_Pop.csv") 
     df_fires = load_data(file_path_df_fires)
 
