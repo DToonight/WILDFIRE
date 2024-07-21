@@ -16,8 +16,8 @@ import plotly.graph_objs as go
 #import plotly.io as pio
 #import plotly.offline as py
 
-from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
-init_notebook_mode(connected=True)
+#from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
+#init_notebook_mode(connected=True)
 
 
 import datetime
