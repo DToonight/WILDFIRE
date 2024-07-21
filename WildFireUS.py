@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 # streamlit run 'C:\Users\fta\Desktop\PROJET WILD FIRE\Streamlit\Final\WildFireUS.py'
 
 import streamlit as st
