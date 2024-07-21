@@ -245,7 +245,7 @@ elif page == "📈 Visualisation":
     @st.cache_data
     def load_data(filename):
         data = pd.read_csv(filename,
-                           dtypes={
+                           dtype={
                                'FOD_ID':'int64',
                             'FPA_ID':'O',
                             'SOURCE_SYSTEM_TYPE':'O',
