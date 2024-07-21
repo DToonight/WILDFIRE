@@ -244,7 +244,7 @@ elif page == "📈 Visualisation":
     # Load your dataset (replace with your own data loading code)
     @st.cache_data
     def load_data(filename):
-        data = pd.read_csv(filename,low_memory=false)
+        data = pd.read_csv(filename)
         return data
     df_fires = load_data('df_Fires_Pop.csv')
     
