@@ -242,12 +242,12 @@ elif page == "📈 Visualisation":
     #                                BEGIN CODE DEPLACE DANS VISUALISATION
     #---------------------------------------------------------------------------------------------
     # Load your dataset (replace with your own data loading code)
-    # @st.cache_data
-    # def load_data(filename):
-    #     data = pd.read_csv(filename)
-    #     return data
-    # df_fires = load_data('df_Fires_Pop.csv')
-    df_fires = pd.read_csv('df_Fires_Pop.csv')
+    @st.cache_data
+    def load_data(filename):
+        data = pd.read_csv(filename,low_memory=false)
+        return data
+    df_fires = load_data('df_Fires_Pop.csv')
+    
     #dictionnaire code qui mappe les abréviations des États américains à leurs noms complets
 
     code = {
