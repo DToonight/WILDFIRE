@@ -834,7 +834,7 @@ elif page == "📈 Visualisation":
             st.write("")
             st.write("")
             df1 = pd.read_csv('ANOVA1.csv')
-            st.table(df1)
+            st.write(df1)
             st.write("*Aux vues de la p-valeur, la relation entre la superficie brûlée et les causes des feux de forêt est vérifié*")
             st.write("<hr style='border: 1px solid black'>", unsafe_allow_html=True)
 
@@ -842,7 +842,7 @@ elif page == "📈 Visualisation":
             st.write("")
             st.write("")
             df2 = pd.read_csv('ANOVA2.csv')
-            st.table(df2)
+            st.write(df2)
             st.write("*Aux vues de la p-valeur, la relation entre la superficie brulée et l'état est vérifié*")
             st.write("<hr style='border: 1px solid black'>", unsafe_allow_html=True)
 
