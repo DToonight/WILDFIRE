@@ -313,7 +313,7 @@ elif page == "📈 Visualisation":
     df_fires['STATE_NAME'] = df_fires['STATE'].map(code)
     @st.cache_data
     def create_figure():
-        df_fires_Discovery_date = df_fires[['FIRE_YEAR', 'DISCOVERY_DOY','DISCOVERY_TIME']]
+        df_fires_Discovery_date = df_fires[['FIRE_YEAR', 'DISCOVERY_DOY']]
         Mois = ['Jan','Fev','Mars','Avril','Mai','Juin','Juil','Aout','Sept','Oct','Nov','Dec']
         #Fonction pour obtenir la date complète à partir du jour et de l'année
         def calculate_month(row): 
