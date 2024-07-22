@@ -1,3 +1,7 @@
 streamlit
-statsmodels
+pandas
+numpy
 plotly
+statsmodels
+openpyxl
+xlrd
