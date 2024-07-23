@@ -125,8 +125,8 @@ elif page == "🔍 Exploration":
         if option == "Afficher les premières lignes du DataFrame":
            st.table(df_fires_ini.head(10))
         elif option == "Informations supplémentaires":
-           # Infos_Sup_Dataset_ini='''Dimensions du jeu de données : (1880465, 38)
-            st.write("Dimensions du jeu de données : (1880465, 38)")
+            Infos_Sup_Dataset_ini='''Dimensions du jeu de données : (1880465, 38)
+           #st.write("Dimensions du jeu de données : (1880465, 38)")
 Nombre de doublons : 0
 
 Nombre de valeurs manquantes au global : 19788951'''
@@ -140,49 +140,48 @@ Nombre de valeurs manquantes au global : 19788951'''
         elif option == "Informations du dataset":
             df_fires_info = '''<class 'pandas.core.frame.DataFrame'>
 Index: 1151201 entries, 1 to 1151201
-Data columns (total 38 columns):
- #   Column                      Non-Null Count    Dtype  
----  ------                      --------------    -----  
- 0   FOD_ID                      1151201 non-null  int64  
- 1   FPA_ID                      1151201 non-null  object 
- 2   SOURCE_SYSTEM_TYPE          1151201 non-null  object 
- 3   SOURCE_SYSTEM               1151201 non-null  object 
- 4   NWCG_REPORTING_AGENCY       1151201 non-null  object 
- 5   NWCG_REPORTING_UNIT_ID      1151201 non-null  object 
- 6   NWCG_REPORTING_UNIT_NAME    1151201 non-null  object 
- 7   SOURCE_REPORTING_UNIT       1151201 non-null  object 
- 8   SOURCE_REPORTING_UNIT_NAME  1151201 non-null  object 
- 9   LOCAL_FIRE_REPORT_ID        312846 non-null   object 
- 10  LOCAL_INCIDENT_ID           465624 non-null   object 
- 11  FIRE_CODE                   227570 non-null   object 
- 12  FIRE_NAME                   509247 non-null   object 
- 13  ICS_209_INCIDENT_NUMBER     14102 non-null    object 
- 14  ICS_209_NAME                14102 non-null    object 
- 15  MTBS_ID                     7442 non-null     object 
- 16  MTBS_FIRE_NAME              7442 non-null     object 
- 17  COMPLEX_NAME                3321 non-null     object 
- 18  FIRE_YEAR                   1151201 non-null  int64  
- 19  DISCOVERY_DATE              1151201 non-null  float64
- 20  DISCOVERY_DOY               1151201 non-null  int64  
- 21  DISCOVERY_TIME              446258 non-null   float64
- 22  STAT_CAUSE_CODE             1151201 non-null  float64
- 23  STAT_CAUSE_DESCR            1151201 non-null  object 
- 24  CONT_DATE                   475122 non-null   float64
- 25  CONT_DOY                    475122 non-null   float64
- 26  CONT_TIME                   436104 non-null   float64
- 27  FIRE_SIZE                   1151201 non-null  float64
- 28  FIRE_SIZE_CLASS             1151201 non-null  object 
- 29  LATITUDE                    1151201 non-null  float64
- 30  LONGITUDE                   1151201 non-null  float64
- 31  OWNER_CODE                  1151201 non-null  float64
- 32  OWNER_DESCR                 1151201 non-null  object 
- 33  STATE                       1151201 non-null  object 
- 34  COUNTY                      568399 non-null   object 
- 35  FIPS_CODE                   568399 non-null   float64
- 36  FIPS_NAME                   568399 non-null   object 
- 37  Shape                       1151201 non-null  object 
-dtypes: float64(11), int64(3), object(24)
-memory usage: 342.5+ MB'''
+#   Column                      Dtype  
+---  ------                      -----  
+ 0   FOD_ID                      int64  
+ 1   FPA_ID                      object 
+ 2   SOURCE_SYSTEM_TYPE          object 
+ 3   SOURCE_SYSTEM               object 
+ 4   NWCG_REPORTING_AGENCY       object 
+ 5   NWCG_REPORTING_UNIT_ID      object 
+ 6   NWCG_REPORTING_UNIT_NAME    object 
+ 7   SOURCE_REPORTING_UNIT       object 
+ 8   SOURCE_REPORTING_UNIT_NAME  object 
+ 9   LOCAL_FIRE_REPORT_ID        object 
+ 10  LOCAL_INCIDENT_ID           object 
+ 11  FIRE_CODE                   object 
+ 12  FIRE_NAME                   object 
+ 13  ICS_209_INCIDENT_NUMBER     object 
+ 14  ICS_209_NAME                object 
+ 15  MTBS_ID                     object 
+ 16  MTBS_FIRE_NAME              object 
+ 17  COMPLEX_NAME                object 
+ 18  FIRE_YEAR                   int64  
+ 19  DISCOVERY_DATE              float64
+ 20  DISCOVERY_DOY               int64  
+ 21  DISCOVERY_TIME              object 
+ 22  STAT_CAUSE_CODE             float64
+ 23  STAT_CAUSE_DESCR            object 
+ 24  CONT_DATE                   float64
+ 25  CONT_DOY                    float64
+ 26  CONT_TIME                   object 
+ 27  FIRE_SIZE                   float64
+ 28  FIRE_SIZE_CLASS             object 
+ 29  LATITUDE                    float64
+ 30  LONGITUDE                   float64
+ 31  OWNER_CODE                  float64
+ 32  OWNER_DESCR                 object 
+ 33  STATE                       object 
+ 34  COUNTY                      object 
+ 35  FIPS_CODE                   object 
+ 36  FIPS_NAME                   object 
+ 37  Shape                       object 
+dtypes: float64(8), int64(3), object(27)
+memory usage: 559.5+ MB'''
             st.code(df_fires_info,language="python")
         elif option == "Statistiques descriptives":
             st.table(df_fires_ini.describe())
