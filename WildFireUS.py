@@ -125,11 +125,11 @@ elif page == "🔍 Exploration":
         if option == "Afficher les premières lignes du DataFrame":
            st.table(df_fires_ini.head(10))
         elif option == "Informations supplémentaires":
-            Infos_Sup_Dataset_ini='''Dimensions du jeu de données : (1151201, 38)
-
+           # Infos_Sup_Dataset_ini='''Dimensions du jeu de données : (1880465, 38)
+            st.write("Dimensions du jeu de données : (1880465, 38)")
 Nombre de doublons : 0
 
-Nombre de valeurs manquantes au global : 13319717'''
+Nombre de valeurs manquantes au global : 19788951'''
             st.code(Infos_Sup_Dataset_ini,language="python")
             # # Afficher les dimensions du jeu de données
             # st.write("Dimensions du jeu de données :", df_fires_ini.shape)
